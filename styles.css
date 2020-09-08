@@ -1,58 +1,130 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 
 *, *::before, *::after {
     box-sizing: border-box;
 }
-
 a {
     text-decoration: none;
-}
-
-a:visited{
     color: #FFFFFF;
 }
-
+a:visited {
+    color: inherit;
+}
 html {
     font-size: 62.5%;
 }
-
 body {
     padding: 0;
     margin: 0;
     background-color: #333333;
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
+    font-weight: 400;
     color: #FFFFFF;
 }
 .container {
-    padding: 0 25vh;
+    padding: 0 20vw;
 }
-.top-nav {
-    height: 20vh;
+#top-nav {
     display: flex;
     color: inherit;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    visibility: hidden;
+    padding: 0 15vw;
+}
+.sticky {
+    width: 100vw;
+    visibility: visible !important;
+    position: fixed;
+    top: 0;
+    background-color: #333333;
 }
 .social ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    list-style: none;
+    list-style: none; 
+    align-items: center;
+    padding: 0;
 }
-.social a {
+.social li {
     padding: .5rem;
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 .logo {
-    border: 3px #FFFFFF solid;
-    font-size: 4rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 5px;
 }
-.text {
+.logo-border {
+    border: 2px #FFFFFF solid;
+    border-radius: 5px;
+}
+.logo-border:hover {
+    border: 2px #E32A5B solid;
+}
+.btn {
     text-align: center;
-    width: 150px;
-    height: 50px;
+    width: 250px;
+    height: 35px;
     background-color: #E32A5B;
-    border-radius: 15px;
+    border-radius: 10px;
+    margin-top: 1rem;
+    font-size: 2rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.btn-nav {
+    text-align: center;
+    width: 130px;
+    height: 30px;
+    background-color: #E32A5B;
+    border-radius: 5px;
+    margin-left: 3rem;
+    font-size: 1.75rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.container-landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+}
+.headshot {
+    border-radius: 50%;
+}
+.welcome-text {
+    font-size: 3rem;
+    text-align: center;
+}
+.highlight {
+    color: #E32A5B;
+}
+.learn-more {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 2rem;
+}
+.projects ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none; 
+    align-items: center;
+    padding: 0;
+}
+.projects li {
+    padding: 2rem;
+    font-size: 3rem;
 }
