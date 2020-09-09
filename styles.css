@@ -10,6 +10,9 @@ a {
 a:visited {
     color: inherit;
 }
+p {
+    text-align: justify;
+}
 html {
     font-size: 62.5%;
 }
@@ -23,7 +26,7 @@ body {
     color: #FFFFFF;
 }
 .container {
-    padding: 0 20vw;
+    padding: 0 15vw;
 }
 #top-nav {
     display: flex;
@@ -33,6 +36,8 @@ body {
     align-items: center;
     visibility: hidden;
     padding: 0 15vw;
+    background-color: #222222;
+    height: 75px;
 }
 .sticky {
     width: 100vw;
@@ -117,27 +122,74 @@ body {
     color: rgba(255, 255, 255, 0.5);
     font-size: 2rem;
 }
-.projects ul {
+.project {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.hr-project {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+.project-image {
+    border-radius: 10px;
+    border: 1px solid black;
+    max-width: 500px;
+    min-width: 400px;
+    flex: 1;
+    margin: 3rem;
+}
+.project-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 3rem;
+    flex: 1;
+}
+.tags {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    list-style: none; 
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    list-style: none;
     padding: 0;
+    flex-wrap: wrap;
 }
-.projects li {
-    padding: 2rem;
-    font-size: 3rem;
+.tags li {
+    font-size: 1.5rem;
+    border: 2px solid #E32A5B;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    margin-right: 1rem;
 }
 
-@media (max-width: 768px) {
-    .welcome-text {
-        max-width: 400px;
-    }
+@media (max-width: 600px) {
     #top-nav {
         padding: .5rem;
+        background-color: #222222;
     }
     .btn-nav {
         margin-left: 1rem;
+    }
+    .learn-more {
+        visibility: hidden;
+    }
+    .landing {
+        height: 100vh;
+    }
+    .container {
+        padding: 0 3vw;
+    }
+    .project-image {
+        max-width: 400px;
+        min-width: 305px;
+    }
+    .project .btn {
+        width: 100%;
     }
 }
