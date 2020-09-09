@@ -108,6 +108,7 @@ body {
 .welcome-text {
     font-size: 3rem;
     text-align: center;
+    margin-top: 2rem;
 }
 .highlight {
     color: #E32A5B;
@@ -127,4 +128,16 @@ body {
 .projects li {
     padding: 2rem;
     font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+    .welcome-text {
+        max-width: 400px;
+    }
+    #top-nav {
+        padding: .5rem;
+    }
+    .btn-nav {
+        margin-left: 1rem;
+    }
 }
