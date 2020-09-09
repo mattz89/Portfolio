@@ -22,7 +22,7 @@
                         <li><a href="https://www.linkedin.com/in/matthew-zenittini-61482466/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
                     </ul>
                 </div>
-                <a href=""><div class="btn">Text Me</div></a>
+                <a href="#textme"><div class="btn">Text Me</div></a>
                 <a href="#recent-projects"><div class="btn">Recent Projects</div></a>
 
                 <!-- Hides until scroll to this point -->
@@ -34,14 +34,14 @@
                             <li><a href="https://www.instagram.com/matthewzenittini" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
                             <li><a href="https://github.com/mattz89" target="_blank"><i class="fab fa-github-square"></i></a></li>
                             <li><a href="https://www.linkedin.com/in/matthew-zenittini-61482466/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                            <a href="#" class="btn-nav">Text Me</a>
+                            <a href="#textme" class="btn-nav">Text Me</a>
                         </ul>
                     </nav>
                 </header>
 
             </div>
             <a href="#textme">
-                <div class="learn-more">
+                <div class="learn-more" id="recent-projects">
                     <i class="fas fa-angle-down"></i>
                     Learn More
                     <i class="fas fa-angle-down"></i>
@@ -50,7 +50,8 @@
         </div>
 
         <main>
-            <hr class="hr-project" id="recent-projects">
+            <div class="section" style="margin-top:10rem;">Projects</div>
+            <hr class="hr-project" style="margin-top:0;">
             <div class="project">
                 <img class="project-image" src="images/portfolio.png" alt="canned email project">
                 <div class="project-description">
@@ -99,10 +100,50 @@
             </div>
             <hr class="hr-project">
 
+            <div class="section">Freelance Testimonials</div>
+            <div class="testimonial">
+                <div class="quote">
+                    <h2>Setup Wordpress Blog</h2>
+                    Can't say enough good things about Matthew, he understands how to communicate and make you feel like you are in good hands. (Because you are) Always available and willing to work with you - i had an excellent experience. 100% recommend.
+                </div>
+                <div class="quote">
+                    <h2>Style Contact Form</h2>
+                    Great communication, swiftness, enthusiasm, and helpfulness. Matthew genuinely cares about the job being done right, rather than just completing the task. Hire with confidence.
+                </div>
+                <div class="quote">
+                    <h2>Calculator for Wordpress</h2>
+                    Matthew was a pleasure to work with. He is very skilled, and turned our wire-frame into a functioning calculator in a matter of hours. He contributed ideas to make it even better as well. Would definitely hire Matthew again!
+                </div>
+            </div>
+            <hr class="hr-project">
+            <div class="about-container">
+                <div class="about">
+                    <h1>Meet Matt</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec sollicitudin dolor, id iaculis ex. Nullam non nibh interdum, efficitur ipsum eu, tincidunt neque. Pellentesque sapien nunc, cursus in dolor sit amet, feugiat malesuada tellus. Praesent gravida ipsum vitae tempor dignissim. Donec nisi leo, rhoncus sed augue a, posuere tincidunt.</p>
+                    <div class="instagram-feed" id="textme">
+                        <img class="instagram-image" src="images/me.jpg" alt="IGpic">
+                        <img class="instagram-image" src="images/me.jpg" alt="IGpic">
+                        <img class="instagram-image" src="images/me.jpg" alt="IGpic">
+                    </div>
+                </div>
+                <div class="textmesection">
+                    <form action="" class="textme">
+                        <div class="section">Text Matt:</div>
+                        <label for="fname">Name:</label>
+                        <input type="text" id="fname" name="fname">
+                        <label for="phone">Textback #:</label>
+                        <input type="tel" id="phone" name="phone">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+                        <a href=""><div class="btn-text">Send Text</div></a>
+                    </form>
+                </div>
+            </div>
+            <hr class="hr-project">
         </main>
 
         <footer>
-
+            Copyright 2020 Matthew Zenittini. All Rights Reserved.
         </footer>
     </div>
     <script>

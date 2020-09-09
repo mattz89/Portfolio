@@ -12,6 +12,10 @@ a:visited {
 }
 p {
     text-align: justify;
+    font-size: 2rem;
+}
+h1 {
+    font-size: 3rem;
 }
 html {
     font-size: 62.5%;
@@ -94,6 +98,18 @@ body {
     display: flex;
     justify-content: center;
 }
+.btn-text{
+    text-align: center;
+    width: 350px;
+    height: 35px;
+    background-color: #E32A5B;
+    border-radius: 10px;
+    margin-top: 1rem;
+    font-size: 2rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 .container-landing {
     display: flex;
     flex-direction: column;
@@ -167,6 +183,102 @@ body {
     padding: .5rem;
     margin-right: 1rem;
 }
+.testimonial {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.quote {
+    padding: 3rem;
+    min-width: 400px;
+    text-align: justify;
+    flex: 1;
+    font-size: 1.6rem;
+}
+.section {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 1;
+    padding: 3rem;
+    min-width: 400px;
+}
+.about-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+}
+.about-image {
+    max-width: 500px;
+    max-height: 300px;
+
+}
+.instagram-feed {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex: 1;
+    max-height: 300px;
+    width: 100%;
+}
+.instagram-image{
+    width: 200px;
+    min-width: 100px;
+    height: 100%;
+}
+.textme {
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222222;
+    padding: 5rem;
+    border-radius: 10px;
+}
+.textmesection {
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+input {
+    width: 350px;
+    margin-bottom: 1rem;
+    height: 40px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 2rem;
+    text-align: center;
+}
+textarea {
+    width: 350px;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 2rem;
+}
+label {
+    text-align: left;
+}
+footer {
+    margin-bottom: 3rem;
+    text-align: center;
+}
 
 @media (max-width: 600px) {
     #top-nav {
@@ -177,7 +289,7 @@ body {
         margin-left: 1rem;
     }
     .learn-more {
-        visibility: hidden;
+        display: none;
     }
     .landing {
         height: 100vh;
@@ -191,5 +303,14 @@ body {
     }
     .project .btn {
         width: 100%;
+    }
+    input {
+        width: 250px;
+    }
+    textarea {
+        width: 250px;
+    }
+    .btn-text {
+        width: 250px;
     }
 }
