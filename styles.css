@@ -196,7 +196,7 @@ body {
 }
 .quote {
     padding: 3rem;
-    min-width: 400px;
+    min-width: 300px;
     text-align: left;
     flex: 1;
     font-size: 1.6rem;
@@ -227,7 +227,7 @@ q::before {
     align-items: flex-start;
     flex: 1;
     padding: 3rem;
-    min-width: 400px;
+    min-width: 300px;
 }
 .about-container {
     display: flex;
@@ -312,12 +312,12 @@ footer {
     .container {
         padding: 0 3vw;
     }
-    .project-image {
-        max-width: 400px;
-        min-width: 305px;
+    .project-description .btn {
+        min-width: 300px;
     }
-    .project .btn {
-        width: 100%;
+    .project-image {
+        max-width: 300px;
+        min-width: 250px;
     }
     input {
         width: 250px;
