@@ -7,6 +7,7 @@
     <title>Meet Matt Z.</title>
 
     <script src="https://kit.fontawesome.com/e442a36db5.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -54,7 +55,7 @@
             <div class="section" style="margin-top:10rem;">Projects</div>
             <hr class="hr-project" style="margin-top:0;">
             <div class="project">
-                <img class="project-image" src="images/portfolio.png" alt="Portfolio project">
+                <img class="project-image" src="images/portfolio.gif" alt="Portfolio project">
                 <div class="project-description">
                     <h1>Portfolio</h1>
                     <ul class="tags">
@@ -67,7 +68,7 @@
                         <li>Twilio API</li>
                     </ul>
                     <p>This is the first project where I used Figma. It was fun to get familiar with, and I'll definitely be using it in the future. The backend is Django-powered for the Twilio texting feature. This is also my first flexbox based project (I can't believe I waited so long)!</p>
-                    <a href="#"><div class="btn"><i class="fab fa-github-alt"></i>&nbsp;View Code</div></a>
+                    <a href="https://github.com/mattz89/public-django-portfolio"><div class="btn"><i class="fab fa-github-alt"></i>&nbsp;View Code</div></a>
                 </div>
             </div>
             <hr class="hr-project">
@@ -158,7 +159,7 @@
                     </div>
                 </div>
                 <div class="textmesection">
-                    <form action="" class="textme">
+                    <form method="POST" action="" class="textme">
                         <div class="section">Text Matt:</div>
                         <label for="fname">Name:</label>
                         <input type="text" id="fname" name="fname">
@@ -190,6 +191,10 @@
             navbar.classList.remove("sticky");
           }
         }
-        </script>
+
+    	var scroll = new SmoothScroll('a[href*="#"]', {
+	        speed: 300
+        });
+    </script>
 </body>
 </html>
