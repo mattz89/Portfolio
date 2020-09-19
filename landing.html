@@ -210,25 +210,20 @@
 	        speed: 300
         });
 
-        document.addEventListener("DOMContentLoaded", function(event) {
-          
-            window.onload = function() {
-                //headshot animation (fade in)
-                gsap.fromTo(".animate_hs", {opacity: "-1",}, {opacity: 1, duration: 1} );
+        //headshot animation (fade in)
+        gsap.fromTo(".animate_hs", {opacity: "-1",}, {opacity: 1, duration: 1} );
 
-                //Welcome text animation (fade in + right)
-                gsap.fromTo(".animate_wt", {opacity: "-1", x: "-100"}, {x: 0, opacity: 1, duration: 1, stagger: .8} );
+        //Welcome text animation (fade in + right)
+        gsap.fromTo(".animate_wt", {opacity: "-1", x: "-100"}, {x: 0, opacity: 1, duration: 1, stagger: .8} );
 
-                //Social list animation (fall in + thud)
-                gsap.fromTo(".animate_s", {opacity: "-3", y: "-50"}, {y: 0, opacity: 1, duration: 4, stagger: .2} );
+        //Social list animation (fall in + thud)
+        gsap.fromTo(".animate_s", {opacity: "-3", y: "-50"}, {y: 0, opacity: 1, duration: 4, stagger: .2} );
 
-                //Landing button animation (fade in + up)
-                gsap.fromTo(".animate_btn", {opacity: "-4", y: "200"}, {y: 0, opacity: 1, duration: 5, stagger: .2} );
+        //Landing button animation (fade in + up)
+        gsap.fromTo(".animate_btn", {opacity: "-4", y: "200"}, {y: 0, opacity: 1, duration: 5, stagger: .2} );
 
-                //Learn more animation (fade in)
-                gsap.fromTo(".animate_lm", {opacity: -7,}, {opacity: 1, duration: 7} );
-            }
-        })
+        //Learn more animation (fade in)
+        gsap.fromTo(".animate_lm", {opacity: -7,}, {opacity: 1, duration: 7} );
     </script>
 </body>
 </html>
