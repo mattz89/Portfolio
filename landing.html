@@ -3,28 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Local Resources -->
     <link rel="stylesheet" href="styles.css">
+
+
     <title>Meet Matt Z.</title>
 
+    <!-- Remote Resources -->
     <script src="https://kit.fontawesome.com/e442a36db5.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="container-landing">
+
+            <!-- Landing Page View -->
             <div class="landing">
-                <img class="headshot" width="140px" height="140px" src="images/me.jpg" alt="headshot">
-                <div class="welcome-text">Hi, I'm <span class="highlight">Matt</span>. Sales Pro Turned Dev.</div>
+                <img class="headshot animate_hs" width="140px" height="140px" src="images/me.jpg" alt="headshot">
+                <div class="welcome-text animate_wt">Hi, I'm <span class="highlight">Matt</span>. <span class="animate_wt">Sales Pro Turned Dev.</span></div>
                 <div class="social">
                     <ul>
-                        <li><a href="https://www.facebook.com/mattzenittini" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
-                        <li><a href="https://www.instagram.com/matthewzenittini" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
-                        <li><a href="https://github.com/mattz89" target="_blank"><i class="fab fa-github-square"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/matthew-zenittini-61482466/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="animate_s"><a href="https://www.facebook.com/mattzenittini" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                        <li class="animate_s"><a href="https://www.instagram.com/matthewzenittini" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+                        <li class="animate_s"><a href="https://github.com/mattz89" target="_blank"><i class="fab fa-github-square"></i></a></li>
+                        <li class="animate_s"><a href="https://www.linkedin.com/in/matthew-zenittini-61482466/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
                     </ul>
                 </div>
-                <a href="#textme"><div class="btn">Text Me</div></a>
-                <a href="#recent-projects"><div class="btn">Recent Projects</div></a>
+                <a href="#textme"><div class="btn animate_btn">Text Me</div></a>
+                <a href="#recent-projects"><div class="btn animate_btn">Recent Projects</div></a>
 
                 <!-- Hides until scroll to this point -->
                 <header id="top-nav">
@@ -43,7 +51,7 @@
 
             </div>
             <a href="#about">
-                <div class="learn-more" id="recent-projects">
+                <div class="learn-more animate_lm" id="recent-projects">
                     <i class="fas fa-angle-down"></i>
                     Learn More
                     <i class="fas fa-angle-down"></i>
@@ -51,6 +59,7 @@
             </a>
         </div>
 
+        <!-- Product Showcase -->
         <main>
             <div class="section" style="margin-top:10rem;">Projects</div>
             <hr class="hr-project" style="margin-top:0;">
@@ -124,7 +133,7 @@
             </div>
             <hr class="hr-project">
 
-
+            <!-- Testimonial Showcase -->
             <div class="section">Freelance Testimonials</div>
             <div class="testimonial">
                 <div class="quote">
@@ -146,6 +155,8 @@
                     <br><a href="https://www.bmiguide.com" target="_blank">BMI Guide</a>
                 </div>
             </div>
+
+            <!-- About Section -->
             <hr class="hr-project" id="about">
             <div class="about-container">
                 <div class="about">
@@ -178,7 +189,9 @@
             Copyright 2020 Matthew Zenittini. All Rights Reserved.
         </footer>
     </div>
+
     <script>
+        //Hides and unhides sticky nav
         window.onscroll = function() {stickyNav()};
         
         var navbar = document.getElementById("top-nav");
@@ -192,9 +205,30 @@
           }
         }
 
+        //Adds smooth scroll for browsers that don't support CSS smooth scrolling
     	var scroll = new SmoothScroll('a[href*="#"]', {
 	        speed: 300
         });
+
+        document.addEventListener("DOMContentLoaded", function(event) {
+          
+            window.onload = function() {
+                //headshot animation (fade in)
+                gsap.fromTo(".animate_hs", {opacity: "-1",}, {opacity: 1, duration: 1} );
+
+                //Welcome text animation (fade in + right)
+                gsap.fromTo(".animate_wt", {opacity: "-1", x: "-100"}, {x: 0, opacity: 1, duration: 1, stagger: .8} );
+
+                //Social list animation (fall in + thud)
+                gsap.fromTo(".animate_s", {opacity: "-3", y: "-50"}, {y: 0, opacity: 1, duration: 3, stagger: .2} );
+
+                //Landing button animation (fade in + up)
+                gsap.fromTo(".animate_btn", {opacity: "-4", y: "200"}, {y: 0, opacity: 1, duration: 4, stagger: .2} );
+
+                //Learn more animation (fade in)
+                gsap.fromTo(".animate_lm", {opacity: -7,}, {opacity: 1, duration: 6} );
+            }
+        })
     </script>
 </body>
 </html>
