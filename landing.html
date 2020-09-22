@@ -12,7 +12,6 @@
 
     <!-- Remote Resources -->
     <script src="https://kit.fontawesome.com/e442a36db5.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 </head>
 <body>
@@ -50,7 +49,7 @@
                 <!-- End Hide -->
 
             </div>
-            <a href="#about">
+            <a href="#recent-projects">
                 <div class="learn-more animate_lm" id="recent-projects">
                     <i class="fas fa-angle-down"></i>
                     Learn More
@@ -77,7 +76,7 @@
                         <li>Twilio API</li>
                     </ul>
                     <p>This is the first project where I used Figma. It was fun to get familiar with, and I'll definitely be using it in the future. The backend is Django-powered for the Twilio texting feature. This is also my first flexbox based project (I can't believe I waited so long)!</p>
-                    <a href="https://github.com/mattz89/public-django-portfolio"><div class="btn"><i class="fab fa-github-alt"></i>&nbsp;View Code</div></a>
+                    <a href="https://github.com/mattz89/public-django-portfolio" target="_blank"><div class="btn"><i class="fab fa-github-alt"></i>&nbsp;View Code</div></a>
                 </div>
             </div>
             <hr class="hr-project">
@@ -88,9 +87,9 @@
                     <h1>Canned Email App</h1>
                     <ul class="tags">
                         <li>2020</li>
+                        <li>HTML/CSS</li>
                         <li>Python</li>
                         <li>Django</li>
-                        <li>HTML/CSS</li>
                         <li>Heroku</li>
                         <li>Git</li>
                     </ul>
@@ -126,6 +125,7 @@
                         <li>Bootstrap</li>
                         <li>JavaScript</li>
                         <li>KioWare API</li>
+                        <li>Git</li>
                     </ul>
                     <p>My work's kiosk software has an API that allows users to display and launch Android applications in the web browser. I created this in my free time to use their API and be able to send it to customers to assist with their own implementations. Note: This only works on Android running KioWare.</p>
                     <a href="https://github.com/mattz89/KioWarePortalPage/blob/master/flatPortal.html" target="_blank"><div class="btn"><i class="fab fa-github-alt"></i>&nbsp;View Code</div></a>
@@ -191,39 +191,37 @@
     </div>
 
     <script>
-        //Hides and unhides sticky nav
+        //Hides and unhides sticky nav + learn more button
         window.onscroll = function() {stickyNav()};
         
         var navbar = document.getElementById("top-nav");
+        var learnMore = document.getElementsByClassName("learn-more")[0];
         var sticky = navbar.offsetTop;
         
         function stickyNav() {
           if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
+            navbar.classList.add("sticky");
+            learnMore.style.visibility = "hidden";
           } else {
             navbar.classList.remove("sticky");
+            learnMore.style.visibility = "visible";
           }
         }
 
-        //Adds smooth scroll for browsers that don't support CSS smooth scrolling
-    	var scroll = new SmoothScroll('a[href*="#"]', {
-	        speed: 300
-        });
-
         //headshot animation (fade in)
-        gsap.fromTo(".animate_hs", {opacity: "-1",}, {opacity: 1, duration: 1} );
+        gsap.fromTo(".animate_hs", {opacity: "-1"}, {opacity: 1, duration: 1} );
 
         //Welcome text animation (fade in + right)
-        gsap.fromTo(".animate_wt", {opacity: "-1", x: "-100"}, {x: 0, opacity: 1, duration: 1, stagger: .8} );
+        gsap.fromTo(".animate_wt", {opacity: "-1", x: "-100", rotation: 10}, {x: 0, opacity: 1, duration: 1, stagger: .8, rotation: 0} );
 
         //Social list animation (fall in + thud)
-        gsap.fromTo(".animate_s", {opacity: "-3", y: "-50"}, {y: 0, opacity: 1, duration: 4, stagger: .2} );
+        gsap.fromTo(".animate_s", {opacity: "-3", y: "-50", rotation: 4}, {y: 0, opacity: 1, duration: 4, stagger: .2, rotation: 0} );
 
         //Landing button animation (fade in + up)
-        gsap.fromTo(".animate_btn", {opacity: "-4", y: "200"}, {y: 0, opacity: 1, duration: 5, stagger: .2} );
+        gsap.fromTo(".animate_btn", {opacity: "-4", y: "200", rotation: 4}, {y: 0, opacity: 1, duration: 5, stagger: .2, rotation: 0} );
 
         //Learn more animation (fade in)
-        gsap.fromTo(".animate_lm", {opacity: -7,}, {opacity: 1, duration: 7} );
+        gsap.fromTo(".animate_lm", {opacity: -7, rotation: 4}, {opacity: 1, duration: 7, rotation: 0} );
     </script>
 </body>
 </html>

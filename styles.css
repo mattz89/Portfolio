@@ -30,6 +30,7 @@ h1 {
 }
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 body {
     padding: 0;
@@ -313,9 +314,6 @@ footer {
     }
     .btn-nav {
         margin-left: 1rem;
-    }
-    .learn-more {
-        visibility: hidden;
     }
     .landing {
         height: 100vh;
