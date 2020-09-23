@@ -58,11 +58,13 @@
             </a>
         </div>
 
-        <!-- Product Showcase -->
+        <!-- Project Showcase -->
         <main>
             <div class="section" style="margin-top:10rem;">Projects</div>
             <hr class="hr-project" style="margin-top:0;">
-            <div class="project">
+
+            <!-- Project 1 -->
+            <div class="project animate_project">
                 <img class="project-image" src="images/portfolio.gif" alt="Portfolio project">
                 <div class="project-description">
                     <h1>Portfolio</h1>
@@ -81,7 +83,8 @@
             </div>
             <hr class="hr-project">
 
-            <div class="project">
+            <!-- Project 2 -->
+            <div class="project animate_project">
                 <img class="project-image" src="images/canned.gif" alt="Canned Email project">
                 <div class="project-description">
                     <h1>Canned Email App</h1>
@@ -99,7 +102,8 @@
             </div>
             <hr class="hr-project">
 
-            <div class="project">
+            <!-- Project 3 -->
+            <div class="project animate_project">
                 <img class="project-image" src="images/bmi.gif" alt="BMI Calculator Project">
                 <div class="project-description">
                     <h1>BMI Calculator</h1>
@@ -115,7 +119,8 @@
             </div>
             <hr class="hr-project">
 
-            <div class="project">
+            <!-- Project 4 -->
+            <div class="project animate_project">
                 <img class="project-image" src="images/portalPage.gif" alt="KioWare Android Portal Page">
                 <div class="project-description">
                     <h1>KioWare Android Portal</h1>
@@ -136,24 +141,31 @@
             <!-- Testimonial Showcase -->
             <div class="section">Freelance Testimonials</div>
             <div class="testimonial">
+
+                <!-- Testimonial 1 -->
                 <div class="quote">
                     <h2>Setup Wordpress Blog</h2>
                     <q>Can't say enough good things about Matthew, he understands how to communicate and make you feel like you are in good hands. (Because you are) Always available and willing to work with you - i had an excellent experience. 100% recommend.</q>
                     <br><br>-Nicole Lupu
                     <br><a href="#">Coming Soon</a>
                 </div>
+
+                <!-- Testimonial 2 -->
                 <div class="quote">
                     <h2>Style Contact Form</h2>
                     <q>Great communication, swiftness, enthusiasm, and helpfulness. Matthew genuinely cares about the job being done right, rather than just completing the task. Hire with confidence.</q>
                     <br><br>-Cathryn Hahn
                     <br><a href="https://www.trifectahouseboats.com/" target="_blank">Trifecta Houseboats</a>
                 </div>
+
+                <!-- Testimonial 3 -->
                 <div class="quote">
                     <h2>Calculator for Wordpress</h2>
                     <q>Matthew was a pleasure to work with. He is very skilled, and turned our wire-frame into a functioning calculator in a matter of hours. He contributed ideas to make it even better as well. Would definitely hire Matthew again!</q>
                     <br><br>-Josh Wilkinson
                     <br><a href="https://www.bmiguide.com" target="_blank">BMI Guide</a>
                 </div>
+                
             </div>
 
             <!-- About Section -->
@@ -197,7 +209,7 @@
         var navbar = document.getElementById("top-nav");
         var learnMore = document.getElementsByClassName("learn-more")[0];
         var sticky = navbar.offsetTop;
-        
+
         function stickyNav() {
           if (window.pageYOffset >= sticky) {
             navbar.classList.add("sticky");
@@ -214,7 +226,7 @@
         //Welcome text animation (fade in + right)
         gsap.fromTo(".animate_wt", {opacity: "-1", x: "-100", rotation: 10}, {x: 0, opacity: 1, duration: 1, stagger: .8, rotation: 0} );
 
-        //Social list animation (fall in + thud)
+        //Social list animation (fall in)
         gsap.fromTo(".animate_s", {opacity: "-3", y: "-50", rotation: 4}, {y: 0, opacity: 1, duration: 4, stagger: .2, rotation: 0} );
 
         //Landing button animation (fade in + up)
@@ -222,6 +234,9 @@
 
         //Learn more animation (fade in)
         gsap.fromTo(".animate_lm", {opacity: -7, rotation: 4}, {opacity: 1, duration: 7, rotation: 0} );
+
+        //Fading in Projects
+        //gsap.fromTo(".animate_project", {opacity: 0, y: 100}, {opacity: 1, ease: Power1.easeInOut, y: 0} );
     </script>
 </body>
 </html>
